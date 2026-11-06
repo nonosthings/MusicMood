@@ -1,0 +1,8 @@
+# A template to copy. This file isn't in index.json, so the app never uses it.
+title: Example Song
+artist: Example Artist
+bpm: 120
+
+[calm 0:00-1:30]
+[hype 1:31-3:10 lightest]
+[intense 3:11-4:05 darkest]
