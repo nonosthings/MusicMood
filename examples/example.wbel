@@ -1,0 +1,7 @@
+# A template to copy. Styles only: never put lyric text in these files.
+title: Example Song
+artist: Example Artist
+
+[0:42.5-0:46 strong bold]
+[1:10-1:18 whisper italic serif]
+[2:31.4-2:35.1 shout bold glow color=vivid]

@@ -73,6 +73,40 @@ Keep keys in alphabetical order to make reviews easier.
 python3 scripts/validate.py
 ```
 
+## Expressive Lyrics (`.wbel`)
+
+Expressive Lyrics change how lyric lines look in the WidgetBlocks player at moments in a song: bigger and bolder when it hits hard, softer and italic when it's quiet. The app shows the lyrics from LRCLIB and applies your styles to whichever line is on screen at that time.
+
+**Never put lyric text in these files.** Lyrics are copyrighted. Files with any line other than `title:`, `artist:`, `isrc:` or a style are rejected.
+
+```
+title: Example Song
+artist: Example Artist
+
+[0:42.5-0:46 strong bold]
+[1:10-1:18 whisper italic serif]
+[2:31.4-2:35.1 shout bold glow color=vivid]
+```
+
+Each style is `[start-end words]`, with times as `m:ss` or `m:ss.s`. The words can include at most one of each:
+
+- **Intensity:** `whisper`, `soft`, `normal`, `strong`, `intense`, `shout`.
+- **Weight and slant:** `bold`, `italic`.
+- **Font:** `rounded`, `serif`, `mono`, `avenir`, `georgia`, `futura`, `courier`, `handwriting`.
+- **Color:** `color=` with a cover-color hint (`dominant`, `lightest`, `darkest`, `vivid`).
+- **Effect:** `glow`, `shake`, `pulse`. Effects are turned off for people using Reduce Motion.
+
+Put the file in `lyrics/<artist>/<title>.wbel` and list it under `"lyrics"` in `index.json`, using the same key as the song:
+
+```json
+{
+  "songs": { … },
+  "lyrics": {
+    "exampleartist|examplesong": "lyrics/example-artist/example-song.wbel"
+  }
+}
+```
+
 ## What not to include
 
 Only timings, moods and the song's title, artist, ISRC and tempo. No lyrics, audio, artwork or links.
