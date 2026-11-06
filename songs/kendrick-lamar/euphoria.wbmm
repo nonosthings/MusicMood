@@ -1,0 +1,9 @@
+title: Euphoria
+artist: Kendrick Lamar
+
+# Soft, jazzy opening: the cover's lightest color (white).
+[neutral 0:00-0:54 lightest]
+# Beat switch: the cover's most vivid color with its lightest (blue/white).
+[hype 0:55-3:52]
+# Final switch: the cover's main color with its darkest (blue/black).
+[intense 3:53-6:24]
